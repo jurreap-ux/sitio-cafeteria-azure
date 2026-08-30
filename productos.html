@@ -3,15 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menú | Cafetería</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Menú | Cafetería Aroma & Grano</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    /* Barra Superior Idéntica */
+    .header {
+      background-color: #38241d;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .navbar a {
+      color: #dfd7d2;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* Contenedor Principal */
+    .main-container {
+      max-width: 980px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    /* Cuadrícula de 3 Columnas */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    /* Tarjeta Compacta con Sombra Suave */
+    .product-card {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #f0f0f0;
+    }
+
+    /* Imagen con proporción exacta */
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    .product-desc {
+      font-size: 0.8rem;
+      color: #666666;
+      line-height: 1.35;
+      margin-bottom: 12px;
+      min-height: 34px;
+      flex-grow: 1;
+    }
+
+    .product-price {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #c96b3a;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    /* Botón Naranja */
+    .btn-action {
+      background-color: #d16b38;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 0;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      transition: background-color 0.2s;
+    }
+
+    .btn-action:hover {
+      background-color: #b75727;
+    }
+
+    /* Pie de página */
+    .footer {
+      text-align: center;
+      padding: 25px 0;
+      color: #888888;
+      font-size: 0.8rem;
+      margin-top: 50px;
+    }
+
+    /* Modo móvil */
+    @media (max-width: 768px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+        max-width: 330px;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Encabezado con Logo y Título Cafetería -->
+  <!-- Encabezado con Icono y Nombre -->
   <header class="header">
-    <div class="logo-container">
-      <h1 style="margin: 0; font-size: 1.4rem; color: #ffffff;">Cafetería</h1>
+    <div class="brand-logo">
+      <span>☕ Aroma & Grano</span>
     </div>
     <nav class="navbar">
       <ul>
@@ -26,77 +185,77 @@
   <main class="main-container">
     <h2 class="section-title">Nuestro Menú de Especialidad</h2>
 
-    <div class="menu-grid">
-      <!-- Producto 1 -->
+    <div class="products-grid">
+      <!-- 1. Espresso Doble -->
       <article class="product-card">
         <img src="assets/img/espresso.jpg" alt="Espresso Doble">
-        <div class="product-info">
-          <h3>Espresso Doble</h3>
-          <p>Extracción concentrada de 60ml de café puro con notas intensas.</p>
+        <div class="card-content">
+          <h3 class="product-title">Espresso Doble</h3>
+          <p class="product-desc">Extracción concentrada de 60ml de café puro.</p>
           <span class="product-price">$2.80</span>
-          <button type="button" class="btn-order">Ordenar / Info</button>
+          <button type="button" class="btn-action">Ordenar / Info</button>
         </div>
       </article>
 
-      <!-- Producto 2 -->
+      <!-- 2. Latte Vainilla -->
       <article class="product-card">
         <img src="assets/img/latte.jpg" alt="Latte Vainilla">
-        <div class="product-info">
-          <h3>Latte Vainilla</h3>
-          <p>Café espresso con leche texturizada y extracto natural de vainilla.</p>
+        <div class="card-content">
+          <h3 class="product-title">Latte Vainilla</h3>
+          <p class="product-desc">Café espresso con leche texturizada y extracto de vainilla.</p>
           <span class="product-price">$3.75</span>
-          <button type="button" class="btn-order">Ordenar / Info</button>
+          <button type="button" class="btn-action">Ordenar / Info</button>
         </div>
       </article>
 
-      <!-- Producto 3 -->
+      <!-- 3. Cappuccino Italiano -->
       <article class="product-card">
         <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&auto=format&fit=crop&q=60" alt="Cappuccino Italiano">
-        <div class="product-info">
-          <h3>Cappuccino Italiano</h3>
-          <p>Espresso con abundante espuma de leche y toque de canela.</p>
+        <div class="card-content">
+          <h3 class="product-title">Cappuccino Italiano</h3>
+          <p class="product-desc">Espresso con abundante espuma de leche y canela.</p>
           <span class="product-price">$3.50</span>
-          <button type="button" class="btn-order">Ordenar / Info</button>
+          <button type="button" class="btn-action">Ordenar / Info</button>
         </div>
       </article>
 
-      <!-- Producto 4 -->
+      <!-- 4. Cold Brew -->
       <article class="product-card">
         <img src="assets/img/coldbrew.jpg" alt="Cold Brew">
-        <div class="product-info">
-          <h3>Cold Brew</h3>
-          <p>Café infusionado en frío durante 16 horas, suave y refrescante.</p>
+        <div class="card-content">
+          <h3 class="product-title">Cold Brew</h3>
+          <p class="product-desc">Café infusionado en frío durante 16 horas, suave y refrescante.</p>
           <span class="product-price">$4.00</span>
-          <button type="button" class="btn-order">Ordenar / Info</button>
+          <button type="button" class="btn-action">Ordenar / Info</button>
         </div>
       </article>
 
-      <!-- Producto 5 -->
+      <!-- 5. Filtrado Chemex -->
       <article class="product-card">
-        <img src="assets/img/chemex.jpg" alt="Filtrado Chemex">
-        <div class="product-info">
-          <h3>Filtrado Chemex (Para 2)</h3>
-          <p>Método de extracción por goteo con notas claras y florales.</p>
+        <img src="assets/img/chemex.jpg" alt="Filtrado Chemex (Para 2)">
+        <div class="card-content">
+          <h3 class="product-title">Filtrado Chemex (Para 2)</h3>
+          <p class="product-desc">Método de extracción por goteo con notas claras y florales.</p>
           <span class="product-price">$5.50</span>
-          <button type="button" class="btn-order">Ordenar / Info</button>
+          <button type="button" class="btn-action">Ordenar / Info</button>
         </div>
       </article>
 
-      <!-- Producto 6 -->
+      <!-- 6. Croissant Francés -->
       <article class="product-card">
         <img src="assets/img/croissant.jpg" alt="Croissant Francés">
-        <div class="product-info">
-          <h3>Croissant Francés</h3>
-          <p>Hojaldre artesanal recién horneado con mantequilla pura.</p>
+        <div class="card-content">
+          <h3 class="product-title">Croissant Francés</h3>
+          <p class="product-desc">Hojaldre artesanal recién horneado con mantequilla pura.</p>
           <span class="product-price">$2.25</span>
-          <button type="button" class="btn-order">Ordenar / Info</button>
+          <button type="button" class="btn-action">Ordenar / Info</button>
         </div>
       </article>
     </div>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 Cafetería - Todos los derechos reservados.</p>
+    <p>&copy; 2026 Aroma & Grano Coffee Roasters. Todos los derechos reservados.</p>
   </footer>
 
 </body>
