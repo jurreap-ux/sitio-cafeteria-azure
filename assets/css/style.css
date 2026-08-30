@@ -1,31 +1,67 @@
-/* Contenedor del encabezado */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #3b2219;
-  color: #ffffff;
+/* Contenedor en cuadrícula / fila para las tarjetas */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas exactas de lado a lado */
+  gap: 25px; /* Espacio entre cada tarjeta */
+  margin-top: 20px;
 }
 
-/* Alineación exacta del Logo y el Título */
-.logo-container {
+/* Estructura de cada tarjeta */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
-  align-items: center; /* Alinea verticalmente al centro el icono y el texto */
-  gap: 12px;           /* Espacio horizontal entre logo y texto */
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.logo-img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Ajuste de las imágenes dentro de las tarjetas */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Evita que la foto se deforme o estire */
   display: block;
 }
 
-.logo-container h1 {
-  font-size: 1.5rem;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  color: #ffffff;
+/* Contenido interno de la tarjeta */
+.card-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.card-body h4 {
+  margin: 0 0 8px 0;
+  color: #3b2219;
+  font-size: 1.2rem;
+}
+
+.card-body p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.card-body .price {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #c86d3b;
+}
+
+/* En celulares o pantallas pequeñas se colocan en 1 sola columna */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
 }
