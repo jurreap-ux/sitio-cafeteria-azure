@@ -1,67 +1,80 @@
-/* Contenedor en cuadrícula / fila para las tarjetas */
-.cards-grid {
+/* Cuadrícula de 3 columnas de lado a lado */
+.menu-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas exactas de lado a lado */
-  gap: 25px; /* Espacio entre cada tarjeta */
-  margin-top: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 15px;
 }
 
-/* Estructura de cada tarjeta */
-.card {
-  background-color: #ffffff;
-  border-radius: 12px;
+/* Tarjeta individual */
+.product-card {
+  background: #ffffff;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-}
-
-/* Ajuste de las imágenes dentro de las tarjetas */
-.card img {
+.product-card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover; /* Evita que la foto se deforme o estire */
+  height: 190px;
+  object-fit: cover;
   display: block;
 }
 
-/* Contenido interno de la tarjeta */
-.card-body {
-  padding: 1.2rem;
+.product-info {
+  padding: 15px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: space-between;
+  text-align: left;
 }
 
-.card-body h4 {
-  margin: 0 0 8px 0;
-  color: #3b2219;
-  font-size: 1.2rem;
+.product-info h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 6px 0;
 }
 
-.card-body p {
+.product-info p {
+  font-size: 0.85rem;
   color: #666;
-  font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #d36b3b;
   margin-bottom: 12px;
 }
 
-.card-body .price {
-  font-size: 1.15rem;
+/* Botón naranja Ordenar / Info */
+.btn-order {
+  background-color: #d36b3b;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
   font-weight: bold;
-  color: #c86d3b;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
 }
 
-/* En celulares o pantallas pequeñas se colocan en 1 sola columna */
+.btn-order:hover {
+  background-color: #b85728;
+}
+
+/* Modo celular */
 @media (max-width: 768px) {
-  .cards-grid {
+  .menu-grid {
     grid-template-columns: 1fr;
   }
-}
 }
