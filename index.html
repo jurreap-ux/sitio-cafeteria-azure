@@ -1,65 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aroma & Grano | Cafetería de Especialidad</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">☕ Aroma & Grano</a>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="productos.html">Menú</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <h1>El Arte del Café de Especialidad</h1>
-            <p>Granos seleccionados de origen y tostado artesanal para una experiencia única en cada taza.</p>
-            <a href="productos.html" class="btn">Explorar Menú</a>
-        </section>
+  <!-- Encabezado con Logo y Título -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="assets/img/logo.png" alt="Logo Cafetería" class="logo-img">
+      <h1>Cafetería</h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="productos.html">Menú</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <h2>Nuestros Favoritos</h2>
-        <div class="grid-container">
-            <article class="card">
-                <img src="assets/img/espresso.jpg" alt="Café Espresso Clásico">
-                <div class="card-body">
-                    <h3>Espresso Origen</h3>
-                    <p>Extracción pura con acidez brillante y crema densa.</p>
-                    <strong>$2.50</strong>
-                    <a href="contacto.html" class="btn">Ordenar / Info</a>
-                </div>
-            </article>
+  <!-- Banner Principal -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h2>El Arte del Café de Especialidad</h2>
+      <p>Granos seleccionados de origen y tostado artesanal para una experiencia única en cada taza.</p>
+      <a href="productos.html" class="btn-cta">Explorar Menú</a>
+    </div>
+  </section>
 
-            <article class="card">
-                <img src="assets/img/latte.jpg" alt="Café Latte Artesanal">
-                <div class="card-body">
-                    <h3>Café Latte</h3>
-                    <p>Espresso suave combinado con leche vaporizada y arte latte.</p>
-                    <strong>$3.20</strong>
-                    <a href="contacto.html" class="btn">Ordenar / Info</a>
-                </div>
-            </article>
+  <!-- Presentación -->
+  <main class="main-container">
+    <section class="intro-section">
+      <h3>Pasión por el Grano y la Calidad</h3>
+      <p>En nuestra <strong>Cafetería</strong> seleccionamos cuidadosamente lotes de café de altura cultivados de forma sostenible. Combinamos métodos artesanales de extracción con técnicas modernas para ofrecer bebidas equilibradas con aromas intensos y notas de sabor únicas.</p>
+    </section>
 
-            <article class="card">
-                <img src="assets/img/cappuccino.jpg" alt="Cappuccino Clásico">
-                <div class="card-body">
-                    <h3>Cappuccino Clásico</h3>
-                    <p>Equilibrio perfecto de espresso, leche y microespuma densa.</p>
-                    <strong>$3.50</strong>
-                    <a href="contacto.html" class="btn">Ordenar / Info</a>
-                </div>
-            </article>
-        </div>
-    </main>
+    <!-- Favoritos -->
+    <section class="featured-section">
+      <h3>Nuestros Favoritos</h3>
+      <div class="cards-grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=500&auto=format&fit=crop&q=60" alt="Espresso">
+          <div class="card-body">
+            <h4>Espresso Clásico</h4>
+            <p>Extracción pura y concentrada con notas a chocolate amargo y crema dorada.</p>
+            <span class="price">$2.50</span>
+          </div>
+        </article>
 
-    <footer>
-        <p>&copy; 2026 Aroma & Grano Coffee Roasters. Todos los derechos reservados.</p>
-    </footer>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&auto=format&fit=crop&q=60" alt="Cappuccino">
+          <div class="card-body">
+            <h4>Cappuccino Italiano</h4>
+            <p>Espresso intenso con leche vaporizada y suave microespuma artesanal.</p>
+            <span class="price">$3.50</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&auto=format&fit=crop&q=60" alt="Chemex">
+          <div class="card-body">
+            <h4>Filtrado Chemex</h4>
+            <p>Método de vertido manual que resalta notas florales y acidez brillante.</p>
+            <span class="price">$4.00</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Cafetería - Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>
