@@ -3,16 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cafetería</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Inicio | Cafetería Aroma & Grano</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f7f5f2;
+      color: #333333;
+    }
+
+    /* Barra Superior */
+    .header {
+      background-color: #38241d;
+      padding: 12px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar a {
+      color: #dfd7d2;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* Hero Banner Principal */
+    .hero-section {
+      background: linear-gradient(rgba(56, 36, 29, 0.75), rgba(56, 36, 29, 0.75)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&auto=format&fit=crop&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero-section h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-section p {
+      font-size: 1.05rem;
+      max-width: 650px;
+      margin: 0 auto 20px auto;
+      color: #f0e6df;
+      line-height: 1.5;
+    }
+
+    .btn-hero {
+      display: inline-block;
+      background-color: #d16b38;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: background-color 0.2s;
+    }
+
+    .btn-hero:hover {
+      background-color: #b75727;
+    }
+
+    /* Contenedor Principal */
+    .main-container {
+      max-width: 900px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 22px;
+      text-align: left;
+    }
+
+    /* Grid de Características / Servicios */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 35px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      border: 1px solid #f0f0f0;
+      text-align: center;
+    }
+
+    .feature-card span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .feature-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #38241d;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      font-size: 0.82rem;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    /* Tarjeta Destacada de Bienvenida */
+    .welcome-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      border: 1px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .welcome-card img {
+      width: 260px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .welcome-text h3 {
+      font-size: 1.15rem;
+      color: #38241d;
+      margin-bottom: 8px;
+    }
+
+    .welcome-text p {
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Pie de página */
+    .footer {
+      background-color: #38241d;
+      color: #cbbab1;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.85rem;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      .welcome-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .welcome-card img {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Encabezado con Logo y Título -->
-<header class="header">
-    <div class="logo-container" style="display: flex; align-items: center; gap: 10px;">
-      <img src="assets/img/logo.png" alt="Logo Cafetería" style="width: 38px; height: 38px; object-fit: contain;">
-      <h1 style="margin: 0; font-size: 1.4rem; color: #ffffff;">Cafetería</h1>
+  <header class="header">
+    <div class="brand-logo">
+      <span>☕ Aroma & Grano</span>
     </div>
     <nav class="navbar">
       <ul>
@@ -24,58 +223,44 @@
     </nav>
   </header>
 
-  <!-- Banner Principal -->
-  <section class="hero-banner">
-    <div class="hero-content">
-      <h2>El Arte del Café de Especialidad</h2>
-      <p>Granos seleccionados de origen y tostado artesanal para una experiencia única en cada taza.</p>
-      <a href="productos.html" class="btn-cta">Explorar Menú</a>
-    </div>
+  <section class="hero-section">
+    <h1>El Arte del Café de Especialidad</h1>
+    <p>Granos seleccionados de fincas de altura y perfiles de tueste calibrados a diario para brindarte una experiencia inigualable.</p>
+    <a href="productos.html" class="btn-hero">Ver Menú Completo</a>
   </section>
 
-  <!-- Presentación -->
   <main class="main-container">
-    <section class="intro-section">
-      <h3>Pasión por el Grano y la Calidad</h3>
-      <p>En nuestra <strong>Cafetería</strong> seleccionamos cuidadosamente lotes de café de altura cultivados de forma sostenible. Combinamos métodos artesanales de extracción con técnicas modernas para ofrecer bebidas equilibradas con aromas intensos y notas de sabor únicas.</p>
-    </section>
-
-    <!-- Favoritos -->
-    <section class="featured-section">
-      <h3>Nuestros Favoritos</h3>
-      <div class="cards-grid">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=500&auto=format&fit=crop&q=60" alt="Espresso">
-          <div class="card-body">
-            <h4>Espresso Clásico</h4>
-            <p>Extracción pura y concentrada con notas a chocolate amargo y crema dorada.</p>
-            <span class="price">$2.50</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&auto=format&fit=crop&q=60" alt="Cappuccino">
-          <div class="card-body">
-            <h4>Cappuccino Italiano</h4>
-            <p>Espresso intenso con leche vaporizada y suave microespuma artesanal.</p>
-            <span class="price">$3.50</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&auto=format&fit=crop&q=60" alt="Chemex">
-          <div class="card-body">
-            <h4>Filtrado Chemex</h4>
-            <p>Método de vertido manual que resalta notas florales y acidez brillante.</p>
-            <span class="price">$4.00</span>
-          </div>
-        </article>
+    <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <span>🌱</span>
+        <h3>Origen Seleccionado</h3>
+        <p>Trabajamos únicamente con micro-lotes de café 100% arábica de origen ético.</p>
       </div>
-    </section>
+      <div class="feature-card">
+        <span>🔥</span>
+        <h3>Tueste Artesanal</h3>
+        <p>Tostado en pequeños lotes semanales para garantizar frescura e intensidad en cada taza.</p>
+      </div>
+      <div class="feature-card">
+        <span>🥐</span>
+        <h3>Pastelería Diaria</h3>
+        <p>Acompañamientos frescos y horneados cada mañana con recetas artesanales.</p>
+      </div>
+    </div>
+
+    <div class="welcome-card">
+      <img src="assets/img/latte.jpg" alt="Café de Especialidad">
+      <div class="welcome-text">
+        <h3>Tu Espacio Ideal para Cada Momento</h3>
+        <p>Ya sea para empezar el día con un espresso concentrado, disfrutar una tarde de estudio con un Latte Vainilla, o compartir un método Chemex con amigos, en Aroma & Grano creamos un ambiente cálido y cómodo para ti.</p>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 Cafetería - Todos los derechos reservados.</p>
+    <p>&copy; 2026 Aroma & Grano Coffee Roasters. Todos los derechos reservados.</p>
   </footer>
 
 </body>
