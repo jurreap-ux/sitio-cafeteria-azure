@@ -3,14 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nosotros | Cafetería</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Nosotros | Cafetería Aroma & Grano</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f7f5f2;
+      color: #333333;
+    }
+
+    /* Barra Superior Idéntica */
+    .header {
+      background-color: #38241d;
+      padding: 12px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar a {
+      color: #dfd7d2;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* Contenedor Principal */
+    .main-container {
+      max-width: 900px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .main-heading {
+      text-align: center;
+      color: #38241d;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+
+    /* Tarjetas de Contenido Estilizadas */
+    .card-box {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid #eae5df;
+      margin-bottom: 20px;
+    }
+
+    .card-box h3 {
+      color: #38241d;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #ecd8cc;
+      padding-bottom: 6px;
+    }
+
+    .card-box p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #555555;
+    }
+
+    /* Rejilla de Misión y Visión en 2 columnas */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Lista de Valores */
+    .values-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    .values-list li {
+      font-size: 0.92rem;
+      color: #555;
+      padding: 8px 0;
+      border-bottom: 1px dashed #eee;
+      line-height: 1.5;
+    }
+
+    .values-list li:last-child {
+      border-bottom: none;
+    }
+
+    .values-list strong {
+      color: #c96b3a;
+    }
+
+    /* Pie de Página */
+    .footer {
+      background-color: #38241d;
+      color: #cbbab1;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.85rem;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
- <header class="header">
-    <div class="logo-container">
-      <h1 style="margin: 0; font-size: 1.4rem; color: #ffffff;">Cafetería</h1>
+  <!-- Encabezado con Icono y Navegación -->
+  <header class="header">
+    <div class="brand-logo">
+      <span>☕ Aroma & Grano</span>
     </div>
     <nav class="navbar">
       <ul>
@@ -23,38 +165,41 @@
   </header>
 
   <main class="main-container">
-    <h2 class="section-title">Nuestra Historia</h2>
+    <h2 class="main-heading">Conoce Nuestra Pasión</h2>
 
-    <section class="about-box">
-      <h3>El Origen de Nuestra Pasión</h3>
-      <p>Nuestra <strong>Cafetería</strong> nació como un espacio dedicado a revalorizar el grano de café de especialidad. Trabajamos mano a mano con pequeños productores de zonas altas, seleccionando cosechas recolectadas a mano bajo estrictos estándares de calidad. Desde el tueste artesanal hasta la extracción final en barra, cuidamos cada detalle para ofrecer tazas balanceadas, aromáticas y de calidad superior.</p>
+    <!-- Historia -->
+    <section class="card-box">
+      <h3>El Origen de Nuestra Historia</h3>
+      <p>Nuestra <strong>Cafetería</strong> nació como un espacio dedicado a dignificar y revalorizar el grano de café de especialidad. Trabajamos mano a mano con familias y pequeños productores de fincas de altura, seleccionando cosechas recolectadas manualmente bajo estrictos estándares de calidad. Cuidamos cada etapa: desde el tueste artesanal en pequeños lotes hasta la calibración en barra, ofreciendo tazas balanceadas, aromáticas y de calidad superior.</p>
     </section>
 
-    <div class="mv-grid">
-      <article class="about-box">
+    <!-- Misión y Visión en Cuadros Paralelos -->
+    <div class="grid-2">
+      <article class="card-box" style="margin-bottom: 0;">
         <h3>Misión</h3>
-        <p>Brindar una experiencia sensorial auténtica mediante cafés de especialidad de origen seleccionado, promoviendo el comercio justo y la excelencia en el servicio al cliente.</p>
+        <p>Brindar una experiencia sensorial auténtica mediante cafés de especialidad de origen seleccionado, promoviendo el consumo responsable, el comercio justo con productores agrícolas y la excelencia en el servicio.</p>
       </article>
 
-      <article class="about-box">
+      <article class="card-box" style="margin-bottom: 0;">
         <h3>Visión</h3>
-        <p>Ser la cafetería artesanal referente en la región, reconocida por la calidad constante de sus métodos de extracción y su compromiso con la sostenibilidad.</p>
+        <p>Consolidarnos como la cafetería artesanal y tostadero referente de la región, destacando por la innovación constante en métodos de extracción y un firme compromiso con la sostenibilidad ambiental.</p>
       </article>
     </div>
 
-    <section class="about-box">
-      <h3>Nuestros Valores</h3>
+    <!-- Valores -->
+    <section class="card-box">
+      <h3>Nuestros Valores Fundamentales</h3>
       <ul class="values-list">
-        <li><strong>Calidad y Origen:</strong> Granos 100% arábica seleccionados.</li>
-        <li><strong>Comercio Justo:</strong> Respeto y trato ético hacia los caficultores.</li>
-        <li><strong>Artesanía:</strong> Perfiles de tueste calibrados a diario.</li>
-        <li><strong>Calidez:</strong> Atención personalizada y ambiente acogedor.</li>
+        <li><strong>Calidad y Origen:</strong> Pasión por el café 100% arábica recolectado en su punto óptimo.</li>
+        <li><strong>Comercio Justo:</strong> Reconocimiento ético y directo al trabajo de los caficultores.</li>
+        <li><strong>Artesanía y Técnica:</strong> Tostado en pequeños lotes y calibración precisa de cada bebida.</li>
+        <li><strong>Calidez y Hospitalidad:</strong> Un ambiente pensado para disfrutar momentos memorables.</li>
       </ul>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 Cafetería - Todos los derechos reservados.</p>
+    <p>&copy; 2026 Aroma & Grano Coffee Roasters. Todos los derechos reservados.</p>
   </footer>
 
 </body>
